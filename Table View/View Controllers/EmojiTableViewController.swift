@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EmojiTableTableViewController: UITableViewController {
+class EmojiTableViewController: UITableViewController {
     
     // MARK: - Properties
     let cellManager = CellManager()
@@ -22,7 +22,7 @@ class EmojiTableTableViewController: UITableViewController {
     
 }
 // MARK: - UITableViewDataSource
-extension EmojiTableTableViewController /*: UITableViewDataSource */ {
+extension EmojiTableViewController /*: UITableViewDataSource */ {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return emojis.count
     }
@@ -37,5 +37,29 @@ extension EmojiTableTableViewController /*: UITableViewDataSource */ {
     override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         let movedEmoji = emojis.remove(at: sourceIndexPath.row)
         emojis.insert(movedEmoji, at: destinationIndexPath.row)
+        tableView.reloadData()
+    }
+}
+       // MARK: - UITableViewDelegate
+extension EmojiTableViewController /*UITableViewDelegate*/ {
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        switch editingStyle {
+            
+        case .delete:
+            emojis.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+        case .insert:
+            break
+        case .none:
+            break
+        @unknown default:
+            print(#line, #function, "Unknown case in file \(#file)")
+            break
+        }
     }
 }
