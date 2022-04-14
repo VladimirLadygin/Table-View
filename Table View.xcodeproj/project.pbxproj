@@ -7,23 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E70145842807360C006566E2 /* CellManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70145832807360C006566E2 /* CellManager.swift */; };
+		E770E78B2808652D0093E9DC /* EmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E770E78A2808652D0093E9DC /* EmojiCell.swift */; };
+		E784150028072DFB00678C31 /* EmojiTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78414FF28072DFB00678C31 /* EmojiTableTableViewController.swift */; };
+		E784150228072E4700678C31 /* AddTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E784150128072E4700678C31 /* AddTableTableViewController.swift */; };
 		E7F4973F28033AE2003FECFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F4973E28033AE2003FECFD /* AppDelegate.swift */; };
 		E7F4974128033AE2003FECFD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F4974028033AE2003FECFD /* SceneDelegate.swift */; };
-		E7F4974328033AE2003FECFD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F4974228033AE2003FECFD /* ViewController.swift */; };
 		E7F4974628033AE2003FECFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7F4974428033AE2003FECFD /* Main.storyboard */; };
 		E7F4974828033AE3003FECFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7F4974728033AE3003FECFD /* Assets.xcassets */; };
 		E7F4974B28033AE3003FECFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7F4974928033AE3003FECFD /* LaunchScreen.storyboard */; };
+		E7F4975428033EA4003FECFD /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F4975328033EA4003FECFD /* Emoji.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E70145832807360C006566E2 /* CellManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellManager.swift; sourceTree = "<group>"; };
+		E770E78A2808652D0093E9DC /* EmojiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiCell.swift; sourceTree = "<group>"; };
+		E78414FF28072DFB00678C31 /* EmojiTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiTableTableViewController.swift; sourceTree = "<group>"; };
+		E784150128072E4700678C31 /* AddTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTableTableViewController.swift; sourceTree = "<group>"; };
 		E7F4973B28033AE2003FECFD /* Table View.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Table View.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7F4973E28033AE2003FECFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7F4974028033AE2003FECFD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E7F4974228033AE2003FECFD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E7F4974528033AE2003FECFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E7F4974728033AE3003FECFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7F4974A28033AE3003FECFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7F4974C28033AE3003FECFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7F4975328033EA4003FECFD /* Emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,11 +45,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E770E788280863DC0093E9DC /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E7F4974428033AE2003FECFD /* Main.storyboard */,
+				E7F4974928033AE3003FECFD /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E770E789280863F30093E9DC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E770E78A2808652D0093E9DC /* EmojiCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		E78414FC28072C8A00678C31 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E78414FF28072DFB00678C31 /* EmojiTableTableViewController.swift */,
+				E784150128072E4700678C31 /* AddTableTableViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		E78414FD28072CAE00678C31 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E770E789280863F30093E9DC /* Cells */,
+				E770E788280863DC0093E9DC /* Storyboards */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E78414FE28072D6300678C31 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E7F4973E28033AE2003FECFD /* AppDelegate.swift */,
+				E7F4974728033AE3003FECFD /* Assets.xcassets */,
+				E7F4974C28033AE3003FECFD /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E78415032807344B00678C31 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				E70145832807360C006566E2 /* CellManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		E7F4973228033AE2003FECFD = {
 			isa = PBXGroup;
 			children = (
-				E7F4973D28033AE2003FECFD /* Table View */,
 				E7F4973C28033AE2003FECFD /* Products */,
+				E7F4973D28033AE2003FECFD /* Table View */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +117,22 @@
 		E7F4973D28033AE2003FECFD /* Table View */ = {
 			isa = PBXGroup;
 			children = (
-				E7F4973E28033AE2003FECFD /* AppDelegate.swift */,
+				E78415032807344B00678C31 /* Manager */,
+				E7F4975228033BA3003FECFD /* Models */,
 				E7F4974028033AE2003FECFD /* SceneDelegate.swift */,
-				E7F4974228033AE2003FECFD /* ViewController.swift */,
-				E7F4974428033AE2003FECFD /* Main.storyboard */,
-				E7F4974728033AE3003FECFD /* Assets.xcassets */,
-				E7F4974928033AE3003FECFD /* LaunchScreen.storyboard */,
-				E7F4974C28033AE3003FECFD /* Info.plist */,
+				E78414FE28072D6300678C31 /* Supporting Files */,
+				E78414FD28072CAE00678C31 /* View */,
+				E78414FC28072C8A00678C31 /* View Controllers */,
 			);
 			path = "Table View";
+			sourceTree = "<group>";
+		};
+		E7F4975228033BA3003FECFD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E7F4975328033EA4003FECFD /* Emoji.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +206,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7F4974328033AE2003FECFD /* ViewController.swift in Sources */,
+				E784150228072E4700678C31 /* AddTableTableViewController.swift in Sources */,
+				E770E78B2808652D0093E9DC /* EmojiCell.swift in Sources */,
+				E70145842807360C006566E2 /* CellManager.swift in Sources */,
 				E7F4973F28033AE2003FECFD /* AppDelegate.swift in Sources */,
+				E784150028072DFB00678C31 /* EmojiTableTableViewController.swift in Sources */,
+				E7F4975428033EA4003FECFD /* Emoji.swift in Sources */,
 				E7F4974128033AE2003FECFD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,7 +361,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7GP8TDQAX2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Table View/Info.plist";
+				INFOPLIST_FILE = "Table View/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -317,7 +389,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7GP8TDQAX2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Table View/Info.plist";
+				INFOPLIST_FILE = "Table View/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
