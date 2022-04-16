@@ -39,7 +39,7 @@ extension EmojiTableViewController /*: UITableViewDataSource */ {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let emoji = emojis[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "EmojCell")! as! EmojiCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EmojiCell")! as! EmojiCell
         cellManager.configure(cell, with: emoji)
         return cell
     }
@@ -68,7 +68,6 @@ extension EmojiTableViewController /*UITableViewDelegate*/ {
         case .none:
             break
         @unknown default:
-            print(#line, #function, "Unknown case in file \(#file)")
             break
         }
     }
@@ -77,6 +76,7 @@ extension EmojiTableViewController /*UITableViewDelegate*/ {
 // MARK: - Action
 extension EmojiTableViewController {
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
+        
         guard segue.identifier == "saveSegue" else { return }
         
         let source = segue.source as! AddEditTableViewController
@@ -85,6 +85,7 @@ extension EmojiTableViewController {
         if let selectedPath = tableView.indexPathForSelectedRow {
             // Edited cell
             emojis[selectedPath.row] = emoji
+            tableView.reloadRows(at: [selectedPath], with: .automatic)
         } else {
             // Added cell
             let indexPath = IndexPath(row: emojis.count, section: 0)
