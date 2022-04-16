@@ -20,6 +20,16 @@ class EmojiTableViewController: UITableViewController {
         navigationItem.leftBarButtonItem = editButtonItem
     }
     
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "EditSegue" else { return }
+        guard let selectedPath = tableView.indexPathForSelectedRow else { return }
+        
+        let emoji = emojis[selectedPath.row]
+        let destination = segue.destination as! AddEditTableViewController
+        destination.emoji = emoji
+    }
+    
 }
 // MARK: - UITableViewDataSource
 extension EmojiTableViewController /*: UITableViewDataSource */ {
@@ -60,6 +70,26 @@ extension EmojiTableViewController /*UITableViewDelegate*/ {
         @unknown default:
             print(#line, #function, "Unknown case in file \(#file)")
             break
+        }
+    }
+}
+
+// MARK: - Action
+extension EmojiTableViewController {
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
+        guard segue.identifier == "saveSegue" else { return }
+        
+        let source = segue.source as! AddEditTableViewController
+        let emoji = source.emoji
+        
+        if let selectedPath = tableView.indexPathForSelectedRow {
+            // Edited cell
+            emojis[selectedPath.row] = emoji
+        } else {
+            // Added cell
+            let indexPath = IndexPath(row: emojis.count, section: 0)
+            emojis.append(emoji)
+            tableView.insertRows(at: [indexPath], with: .automatic)
         }
     }
 }
