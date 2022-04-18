@@ -92,17 +92,20 @@
                         <sections>
                             <tableViewSection headerTitle=" Symbol" id="gDW-tL-W71" userLabel="Symbol">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="hcU-pM-FZF">
-                                        <rect key="frame" x="20" y="32" width="374" height="41.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="hcU-pM-FZF">
+                                        <rect key="frame" x="20" y="32" width="374" height="61.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hcU-pM-FZF" id="HTV-Dg-KHh">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="41.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="61.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Please, enter emoji symbol" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cqk-0x-Ajt">
-                                                    <rect key="frame" x="20" y="11" width="334" height="19.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <rect key="frame" x="20" y="11" width="334" height="39.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="textFieldChanged:" destination="BkK-1o-rh4" eventType="editingDidEnd" id="H2g-Pm-GEm"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -117,17 +120,20 @@
                             </tableViewSection>
                             <tableViewSection headerTitle=" Name" id="FYq-Oj-D8z">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="JzB-7R-4w8">
-                                        <rect key="frame" x="20" y="123.5" width="374" height="41"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="JzB-7R-4w8">
+                                        <rect key="frame" x="20" y="143.5" width="374" height="44.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JzB-7R-4w8" id="43d-pf-5ki">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="41"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="44.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Please, enter emoji symbol name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ByE-XE-SFB">
-                                                    <rect key="frame" x="20" y="11" width="334" height="19"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <rect key="frame" x="20" y="11" width="334" height="22.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="textFieldChanged:" destination="BkK-1o-rh4" eventType="editingDidEnd" id="nyO-Ra-edQ"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -142,17 +148,20 @@
                             </tableViewSection>
                             <tableViewSection headerTitle=" Description" id="fZO-DY-Bd9">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="EAV-Yf-d7m">
-                                        <rect key="frame" x="20" y="214.5" width="374" height="41.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="EAV-Yf-d7m">
+                                        <rect key="frame" x="20" y="238" width="374" height="44.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EAV-Yf-d7m" id="z6F-SB-psb">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="41.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="44.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Please, enter emoji symbol description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hrG-kW-WlQ">
-                                                    <rect key="frame" x="20" y="11" width="334" height="19.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <rect key="frame" x="20" y="11" width="334" height="22.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="textFieldChanged:" destination="BkK-1o-rh4" eventType="editingDidEnd" id="B4i-G5-Go5"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -167,17 +176,20 @@
                             </tableViewSection>
                             <tableViewSection headerTitle=" Usage" id="AuY-yy-Fu3">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="6xh-2g-r5q">
-                                        <rect key="frame" x="20" y="306" width="374" height="41"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="6xh-2g-r5q">
+                                        <rect key="frame" x="20" y="332.5" width="374" height="44.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6xh-2g-r5q" id="bLq-wc-V5T">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="41"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="44.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Please, enter emoji symbol usage" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5x0-uW-LlL">
-                                                    <rect key="frame" x="20" y="11" width="334" height="19"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <rect key="frame" x="20" y="11" width="334" height="22.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="textFieldChanged:" destination="BkK-1o-rh4" eventType="editingDidEnd" id="MvM-Wj-jWC"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -202,7 +214,7 @@
                                 <segue destination="wrt-w2-95t" kind="unwind" unwindAction="unwind:" id="Hat-TB-Mq3"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="whg-TW-vde">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="save" id="whg-TW-vde">
                             <connections>
                                 <segue destination="wrt-w2-95t" kind="unwind" identifier="saveSegue" unwindAction="unwind:" id="k55-Vx-mg1"/>
                             </connections>
@@ -210,8 +222,10 @@
                     </navigationItem>
                     <connections>
                         <outlet property="descriptionTextField" destination="hrG-kW-WlQ" id="VIi-7A-tHG"/>
+                        <outlet property="exitButton" destination="whg-TW-vde" id="Oma-Ah-4h9"/>
                         <outlet property="nameTextField" destination="ByE-XE-SFB" id="Jke-ZM-fPV"/>
                         <outlet property="symbolTextField" destination="Cqk-0x-Ajt" id="78X-yD-79c"/>
+                        <outlet property="titleLabel" destination="IL2-uh-2cn" id="eI5-ll-Gbq"/>
                         <outlet property="usageTextField" destination="5x0-uW-LlL" id="WQG-GM-THZ"/>
                     </connections>
                 </tableViewController>

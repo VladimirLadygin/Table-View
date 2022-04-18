@@ -83,6 +83,7 @@
 		E78414FE28072D6300678C31 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E7F4974028033AE2003FECFD /* SceneDelegate.swift */,
 				E7F4973E28033AE2003FECFD /* AppDelegate.swift */,
 				E7F4974728033AE3003FECFD /* Assets.xcassets */,
 				E7F4974C28033AE3003FECFD /* Info.plist */,
@@ -119,7 +120,6 @@
 			children = (
 				E78415032807344B00678C31 /* Manager */,
 				E7F4975228033BA3003FECFD /* Models */,
-				E7F4974028033AE2003FECFD /* SceneDelegate.swift */,
 				E78414FE28072D6300678C31 /* Supporting Files */,
 				E78414FD28072CAE00678C31 /* View */,
 				E78414FC28072C8A00678C31 /* View Controllers */,
