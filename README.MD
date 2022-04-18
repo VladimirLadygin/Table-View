@@ -1,4 +1,4 @@
-#Emoji Dictionary
+# Emoji Dictionary
 This app could add new emoji to your dictionary with a discription.
 
 Updates of reference project:
