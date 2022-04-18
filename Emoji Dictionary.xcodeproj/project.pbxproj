@@ -11,6 +11,10 @@
 		E770E78B2808652D0093E9DC /* EmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E770E78A2808652D0093E9DC /* EmojiCell.swift */; };
 		E784150028072DFB00678C31 /* EmojiTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78414FF28072DFB00678C31 /* EmojiTableViewController.swift */; };
 		E784150228072E4700678C31 /* AddEditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E784150128072E4700678C31 /* AddEditTableViewController.swift */; };
+		E7D360AC280DD34600F25B66 /* README.MD in Resources */ = {isa = PBXBuildFile; fileRef = E7D360AB280DD34600F25B66 /* README.MD */; };
+		E7D360B1280DD41400F25B66 /* IMG_8238.PNG in Resources */ = {isa = PBXBuildFile; fileRef = E7D360AE280DD41400F25B66 /* IMG_8238.PNG */; };
+		E7D360B2280DD41400F25B66 /* IMG_8234.PNG in Resources */ = {isa = PBXBuildFile; fileRef = E7D360AF280DD41400F25B66 /* IMG_8234.PNG */; };
+		E7D360B3280DD41400F25B66 /* IMG_8237.PNG in Resources */ = {isa = PBXBuildFile; fileRef = E7D360B0280DD41400F25B66 /* IMG_8237.PNG */; };
 		E7F4973F28033AE2003FECFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F4973E28033AE2003FECFD /* AppDelegate.swift */; };
 		E7F4974128033AE2003FECFD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F4974028033AE2003FECFD /* SceneDelegate.swift */; };
 		E7F4974628033AE2003FECFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7F4974428033AE2003FECFD /* Main.storyboard */; };
@@ -24,7 +28,11 @@
 		E770E78A2808652D0093E9DC /* EmojiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiCell.swift; sourceTree = "<group>"; };
 		E78414FF28072DFB00678C31 /* EmojiTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiTableViewController.swift; sourceTree = "<group>"; };
 		E784150128072E4700678C31 /* AddEditTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditTableViewController.swift; sourceTree = "<group>"; };
-		E7F4973B28033AE2003FECFD /* Table View.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Table View.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7D360AB280DD34600F25B66 /* README.MD */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.MD; sourceTree = "<group>"; };
+		E7D360AE280DD41400F25B66 /* IMG_8238.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_8238.PNG; sourceTree = "<group>"; };
+		E7D360AF280DD41400F25B66 /* IMG_8234.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_8234.PNG; sourceTree = "<group>"; };
+		E7D360B0280DD41400F25B66 /* IMG_8237.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_8237.PNG; sourceTree = "<group>"; };
+		E7F4973B28033AE2003FECFD /* Emoji Dictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Emoji Dictionary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7F4973E28033AE2003FECFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7F4974028033AE2003FECFD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E7F4974528033AE2003FECFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -99,9 +107,21 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
+		E7D360AD280DD35C00F25B66 /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				E7D360AF280DD41400F25B66 /* IMG_8234.PNG */,
+				E7D360B0280DD41400F25B66 /* IMG_8237.PNG */,
+				E7D360AE280DD41400F25B66 /* IMG_8238.PNG */,
+			);
+			path = Screenshots;
+			sourceTree = "<group>";
+		};
 		E7F4973228033AE2003FECFD = {
 			isa = PBXGroup;
 			children = (
+				E7D360AD280DD35C00F25B66 /* Screenshots */,
+				E7D360AB280DD34600F25B66 /* README.MD */,
 				E7F4973C28033AE2003FECFD /* Products */,
 				E7F4973D28033AE2003FECFD /* Table View */,
 			);
@@ -110,7 +130,7 @@
 		E7F4973C28033AE2003FECFD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E7F4973B28033AE2003FECFD /* Table View.app */,
+				E7F4973B28033AE2003FECFD /* Emoji Dictionary.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,9 +158,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E7F4973A28033AE2003FECFD /* Table View */ = {
+		E7F4973A28033AE2003FECFD /* Emoji Dictionary */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E7F4974F28033AE3003FECFD /* Build configuration list for PBXNativeTarget "Table View" */;
+			buildConfigurationList = E7F4974F28033AE3003FECFD /* Build configuration list for PBXNativeTarget "Emoji Dictionary" */;
 			buildPhases = (
 				E7F4973728033AE2003FECFD /* Sources */,
 				E7F4973828033AE2003FECFD /* Frameworks */,
@@ -150,9 +170,9 @@
 			);
 			dependencies = (
 			);
-			name = "Table View";
+			name = "Emoji Dictionary";
 			productName = "Table View";
-			productReference = E7F4973B28033AE2003FECFD /* Table View.app */;
+			productReference = E7F4973B28033AE2003FECFD /* Emoji Dictionary.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -170,7 +190,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E7F4973628033AE2003FECFD /* Build configuration list for PBXProject "Table View" */;
+			buildConfigurationList = E7F4973628033AE2003FECFD /* Build configuration list for PBXProject "Emoji Dictionary" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -183,7 +203,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E7F4973A28033AE2003FECFD /* Table View */,
+				E7F4973A28033AE2003FECFD /* Emoji Dictionary */,
 			);
 		};
 /* End PBXProject section */
@@ -194,7 +214,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7F4974B28033AE3003FECFD /* LaunchScreen.storyboard in Resources */,
+				E7D360B1280DD41400F25B66 /* IMG_8238.PNG in Resources */,
+				E7D360B2280DD41400F25B66 /* IMG_8234.PNG in Resources */,
+				E7D360B3280DD41400F25B66 /* IMG_8237.PNG in Resources */,
 				E7F4974828033AE3003FECFD /* Assets.xcassets in Resources */,
+				E7D360AC280DD34600F25B66 /* README.MD in Resources */,
 				E7F4974628033AE2003FECFD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,7 +435,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E7F4973628033AE2003FECFD /* Build configuration list for PBXProject "Table View" */ = {
+		E7F4973628033AE2003FECFD /* Build configuration list for PBXProject "Emoji Dictionary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E7F4974D28033AE3003FECFD /* Debug */,
@@ -420,7 +444,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E7F4974F28033AE3003FECFD /* Build configuration list for PBXNativeTarget "Table View" */ = {
+		E7F4974F28033AE3003FECFD /* Build configuration list for PBXNativeTarget "Emoji Dictionary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E7F4975028033AE3003FECFD /* Debug */,
