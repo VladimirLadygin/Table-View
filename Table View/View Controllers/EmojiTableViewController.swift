@@ -16,8 +16,23 @@ class EmojiTableViewController: UITableViewController {
     // MARK: = UIViewController Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        emojis = Emoji.loadAll() ?? Emoji.loadDefaults()
+        emojis = Emoji.loadAll() ?? Emoji .loadDefaults()
         navigationItem.leftBarButtonItem = editButtonItem
+        
+        let encoder = PropertyListEncoder()
+        if let encodedEmojis = try? encoder.encode(emojis) {
+            
+            let decoder = PropertyListDecoder()
+            if let decodedEmojis = try? decoder.decode([Emoji].self, from: encodedEmojis) {
+                print(#line, #function)
+                for (index, emoji) in decodedEmojis.enumerated() {
+                    print(index, ":", emoji)
+                }
+                print()
+            }
+            
+            
+        }
     }
     
     // MARK: - Navigation
@@ -50,7 +65,7 @@ extension EmojiTableViewController /*: UITableViewDataSource */ {
         tableView.reloadData()
     }
 }
-       // MARK: - UITableViewDelegate
+// MARK: - UITableViewDelegate
 extension EmojiTableViewController /*UITableViewDelegate*/ {
     override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return .delete

@@ -5,7 +5,7 @@
 //  Created by Владимир Ладыгин on 10.04.2022.
 //
 
-struct Emoji {
+struct Emoji: Codable {
     var symbol: String
     var name: String
     var description: String
