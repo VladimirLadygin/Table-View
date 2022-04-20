@@ -12,28 +12,24 @@ class DataManager {
         guard let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first  else {
             return nil
         }
-        return documentDirectory.appendingPathComponent("emojis").appendingPathComponent("plist")
+        return documentDirectory.appendingPathComponent("emojis").appendingPathExtension("json")
     }
     
     func loadEmojis() -> [Emoji]? {
-       print(#line, #function, archiveURL ?? "nil")
+        guard let archiveURL = archiveURL else { return nil }
         
-//        let decoder = PropertyListDecoder()
-//        if let decodedEmojis = try? decoder.decode([Emoji].self, from: encodedEmojis) {
-//            print(#line, #function)
-//            for (index, emoji) in decodedEmojis.enumerated() {
-//                print(index, ":", emoji)
-//            }
-//            print()
-//        }
+        guard let encodedEmojis = try? Data(contentsOf: archiveURL) else { return nil }
         
-        return nil
+        let decoder = PropertyListDecoder()
+        return try? decoder.decode([Emoji].self, from: encodedEmojis)
     }
     
     func saveEmojis(_ emojis: [Emoji]) {
-        let encoder = PropertyListEncoder()
-        guard let encodedEmojis = try? encoder.encode(emojis) else { return }
         guard let archiveURL = archiveURL else { return }
+        print(archiveURL)
+        
+        let encoder = JSONEncoder()
+        guard let encodedEmojis = try? encoder.encode(emojis) else { return }
         
         try? encodedEmojis.write(to: archiveURL, options: .noFileProtection)
 
