@@ -8,6 +8,8 @@ Updates of reference project:
 
 - realised validation of one (no more) a symbol emodji and checking strings for refusing of empty
 
+- added saving data to storage in JSON file format.
+
 
 
 | ![Screen1](https://github.com/VladimirLadygin/Table-View/blob/main/Screenshots/IMG_8234.PNG) | ![Screen2](https://github.com/VladimirLadygin/Table-View/blob/main/Screenshots/IMG_8237.PNG) | ![Screen3](https://github.com/VladimirLadygin/Table-View/blob/main/Screenshots/IMG_8238.PNG) |
